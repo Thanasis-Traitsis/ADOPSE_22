@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ASP.net apps\\ExamGate\\ExamGate\\ExamGate.csproj": {}
+    "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {}
   },
   "projects": {
-    "C:\\ASP.net apps\\ExamGate\\ExamGate\\ExamGate.csproj": {
+    "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ASP.net apps\\ExamGate\\ExamGate\\ExamGate.csproj",
+        "projectUniqueName": "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
         "projectName": "ExamGate",
-        "projectPath": "C:\\ASP.net apps\\ExamGate\\ExamGate\\ExamGate.csproj",
+        "projectPath": "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
         "packagesPath": "C:\\Users\\kalou_000\\.nuget\\packages\\",
-        "outputPath": "C:\\ASP.net apps\\ExamGate\\ExamGate\\obj\\",
+        "outputPath": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kalou_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +40,15 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.3, )"
             }
