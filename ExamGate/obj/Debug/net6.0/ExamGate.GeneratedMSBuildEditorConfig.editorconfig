@@ -8,45 +8,37 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ExamGate
 build_property.RootNamespace = ExamGate
-build_property.ProjectDir = C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\
+build_property.ProjectDir = H:\Github projects\ADOPSE_22\ExamGate\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate
+build_property.MSBuildProjectDirectory = H:\Github projects\ADOPSE_22\ExamGate
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/Home/Index.cshtml]
+[H:/Github projects/ADOPSE_22/ExamGate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/Home/Privacy.cshtml]
+[H:/Github projects/ADOPSE_22/ExamGate/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/LogIn/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/LogIn/Signup.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cU2lnbnVwLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/Shared/Error.cshtml]
+[H:/Github projects/ADOPSE_22/ExamGate/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/Shared/_ValidationScriptsPartial.cshtml]
+[H:/Github projects/ADOPSE_22/ExamGate/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/_ViewImports.cshtml]
+[H:/Github projects/ADOPSE_22/ExamGate/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/_ViewStart.cshtml]
+[H:/Github projects/ADOPSE_22/ExamGate/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thana/Documents/GitHub/ADOPSE_22/ExamGate/Views/Shared/_Layout.cshtml]
+[H:/Github projects/ADOPSE_22/ExamGate/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-d33njzpqk3
