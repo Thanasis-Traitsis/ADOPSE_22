@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ExamGate.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
 using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using ExamGate.Models;
+using Microsoft.AspNetCore.Builder;
 
 
 
@@ -16,6 +18,6 @@ namespace ExamGate.Data
 
         }
 
-        //public DbSet<User> User { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }
