@@ -1,15 +1,31 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExamGate.Models
 {
     public class User
     {
         [Key]
-        int UserId { get; set; }
+        public int UserId { get; set; }
+
         [Required]
-        String? UserName { get; set; }
+        [MaxLength(100)]
+        public String? UserName { get; set; }
+
         [Required]
-        String? UserEmail { get; set; }
+        [MaxLength (100)]
+        public String? UserEmail { get; set; }
+
+        [Required]
+        [MaxLength(255)]
+        [DataType(DataType.Password)]
+        public String? Password { get; set; }
+
+
+        public Boolean Admin { get; set; }
+        public Boolean EndUser { get; set; }
+
+
 
     }
 }
