@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamGate.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220405174519_addTablesToDb")]
-    partial class addTablesToDb
+    [Migration("20220410185750_addNewDb")]
+    partial class addNewDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -73,10 +73,12 @@ namespace ExamGate.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("optionCount")
+                    b.Property<int>("QId")
                         .HasColumnType("int");
 
                     b.HasKey("OptionId");
+
+                    b.HasIndex("QId");
 
                     b.ToTable("Option");
                 });
@@ -92,16 +94,11 @@ namespace ExamGate.Migrations
                     b.Property<int>("Difficulty")
                         .HasColumnType("int");
 
-                    b.Property<int>("OptionId")
-                        .HasColumnType("int");
-
                     b.Property<string>("QuestionText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("QuestionId");
-
-                    b.HasIndex("OptionId");
 
                     b.ToTable("Question");
                 });
@@ -213,15 +210,15 @@ namespace ExamGate.Migrations
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("ExamGate.Models.Question", b =>
+            modelBuilder.Entity("ExamGate.Models.Option", b =>
                 {
-                    b.HasOne("ExamGate.Models.Option", "Options")
+                    b.HasOne("ExamGate.Models.Question", "Questions")
                         .WithMany()
-                        .HasForeignKey("OptionId")
+                        .HasForeignKey("QId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Options");
+                    b.Navigation("Questions");
                 });
 
             modelBuilder.Entity("ExamGate.Models.Try", b =>

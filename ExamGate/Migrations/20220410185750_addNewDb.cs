@@ -5,23 +5,22 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ExamGate.Migrations
 {
-    public partial class addTablesToDb : Migration
+    public partial class addNewDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Option",
+                name: "Question",
                 columns: table => new
                 {
-                    OptionId = table.Column<int>(type: "int", nullable: false)
+                    QuestionId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    OptionText = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    optionCount = table.Column<int>(type: "int", nullable: false),
-                    Grade = table.Column<double>(type: "float", nullable: false)
+                    QuestionText = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Difficulty = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Option", x => x.OptionId);
+                    table.PrimaryKey("PK_Question", x => x.QuestionId);
                 });
 
             migrationBuilder.CreateTable(
@@ -55,23 +54,23 @@ namespace ExamGate.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Question",
+                name: "Option",
                 columns: table => new
                 {
-                    QuestionId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    QuestionText = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Difficulty = table.Column<int>(type: "int", nullable: false),
                     OptionId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    QId = table.Column<int>(type: "int", nullable: false),
+                    OptionText = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Grade = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Question", x => x.QuestionId);
+                    table.PrimaryKey("PK_Option", x => new { x.OptionId, x.QId });
                     table.ForeignKey(
-                        name: "FK_Question_Option_OptionId",
-                        column: x => x.OptionId,
-                        principalTable: "Option",
-                        principalColumn: "OptionId",
+                        name: "FK_Option_Question_QId",
+                        column: x => x.QId,
+                        principalTable: "Question",
+                        principalColumn: "QuestionId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -154,9 +153,9 @@ namespace ExamGate.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Question_OptionId",
-                table: "Question",
-                column: "OptionId");
+                name: "IX_Option_QId",
+                table: "Option",
+                column: "QId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Try_ExamId",
@@ -172,6 +171,9 @@ namespace ExamGate.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Option");
+
+            migrationBuilder.DropTable(
                 name: "Try");
 
             migrationBuilder.DropTable(
@@ -185,9 +187,6 @@ namespace ExamGate.Migrations
 
             migrationBuilder.DropTable(
                 name: "User");
-
-            migrationBuilder.DropTable(
-                name: "Option");
         }
     }
 }
