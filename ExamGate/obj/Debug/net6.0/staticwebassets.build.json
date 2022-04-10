@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OnB1nFgOJ3du32dYIf/k9YcHLompK71hsiixXREl8NI=",
+  "Hash": "OIZTTIBM/gy3SssGq3AFid/81JysytbND/vz7Jp4g+A=",
   "Source": "ExamGate",
   "BasePath": "_content/ExamGate",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ExamGate\\wwwroot",
       "Source": "ExamGate",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExamGate.styles.css",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExamGate.styles.css",
       "SourceId": "ExamGate",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "ExamGate.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExamGate.styles.css"
+      "OriginalItemSpec": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ExamGate.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExamGate.bundle.scp.css",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExamGate.bundle.scp.css",
       "SourceId": "ExamGate",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "ExamGate.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExamGate.bundle.scp.css"
+      "OriginalItemSpec": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ExamGate.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\css\\site.css",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\css\\site.css",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\favicon.ico",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\favicon.ico",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\js\\site.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\js\\site.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "ContentRoot": "H:\\Github projects\\ADOPSE_22\\ExamGate\\wwwroot\\",
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
