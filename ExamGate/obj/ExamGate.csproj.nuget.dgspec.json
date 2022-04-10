@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {}
+    "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {}
   },
   "projects": {
-    "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {
+    "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
+        "projectUniqueName": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
         "projectName": "ExamGate",
-        "projectPath": "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
-        "packagesPath": "C:\\Users\\kalou_000\\.nuget\\packages\\",
-        "outputPath": "H:\\Github projects\\ADOPSE_22\\ExamGate\\obj\\",
+        "projectPath": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
+        "packagesPath": "C:\\Users\\thana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kalou_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.2, )"
             }
           },
           "imports": [
