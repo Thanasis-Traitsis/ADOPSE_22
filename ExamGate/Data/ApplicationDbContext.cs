@@ -19,5 +19,15 @@ namespace ExamGate.Data
         }
 
         public DbSet<User> User { get; set; }
+
+        public DbSet<Option> Option { get; set; }
+
+        public DbSet<Subject> Subject { get; set; }
+
+        public DbSet<Exam> Exam { get; set; }
+
+        public DbSet<Try> Try { get; set; }
+
+        public DbSet<Question> Question { get; set; }
     }
 }
