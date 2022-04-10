@@ -7,6 +7,7 @@ namespace ExamGate.Models
     {
         [Key]
         public int UserId { get; set; }
+<<<<<<< Updated upstream
 
         [Required]
         [MaxLength(100)]
@@ -26,6 +27,12 @@ namespace ExamGate.Models
         public Boolean EndUser { get; set; }
 
 
+=======
+        [Required]
+        public String? UserName { get; set; }
+        [Required]
+        public String? UserEmail { get; set; }
+>>>>>>> Stashed changes
 
     }
 }

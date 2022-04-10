@@ -10,15 +10,17 @@ namespace ExamGate.Models
         public int QuestionId { get; set; }
         [Required]
         public String? QuestionText { get; set; }
+<<<<<<< Updated upstream
 
         [Range(minimum: 1, maximum: 10, ErrorMessage = "Dif. level should be from 1 to 10")]
         public int Difficulty { get; set; }
 
+=======
+>>>>>>> Stashed changes
         [Required]
         [Range(minimum:2 ,maximum:100000,ErrorMessage = "Options must be more than 2")]
         [Display(Name = "Option")]
         public virtual int OptionId { get; set; }
-
         [ForeignKey("OptionId")]
         public virtual Option? Options { get; set; }
     }
