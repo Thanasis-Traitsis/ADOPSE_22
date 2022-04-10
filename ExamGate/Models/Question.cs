@@ -11,10 +11,13 @@ namespace ExamGate.Models
         [Required]
         public String? QuestionText { get; set; }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
         [Range(minimum: 1, maximum: 10, ErrorMessage = "Dif. level should be from 1 to 10")]
         public int Difficulty { get; set; }
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         [Required]
