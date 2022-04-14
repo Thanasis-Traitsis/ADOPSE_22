@@ -6,6 +6,7 @@ namespace ExamGate.Models
     public class Subject
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SubjectId { get; set; }
 
         [Required]

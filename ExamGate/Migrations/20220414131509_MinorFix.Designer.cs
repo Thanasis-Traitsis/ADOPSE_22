@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamGate.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220413190449_myNameIsLolo")]
-    partial class myNameIsLolo
+    [Migration("20220414131509_MinorFix")]
+    partial class MinorFix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -71,6 +71,9 @@ namespace ExamGate.Migrations
 
                     b.Property<double>("Grade")
                         .HasColumnType("float");
+
+                    b.Property<int>("OptionCount")
+                        .HasColumnType("int");
 
                     b.Property<string>("OptionText")
                         .IsRequired()

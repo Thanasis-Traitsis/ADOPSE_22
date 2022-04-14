@@ -70,6 +70,9 @@ namespace ExamGate.Migrations
                     b.Property<double>("Grade")
                         .HasColumnType("float");
 
+                    b.Property<int>("OptionCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("OptionText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

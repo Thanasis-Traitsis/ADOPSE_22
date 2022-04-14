@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
 namespace ExamGate.Models
@@ -6,9 +7,6 @@ namespace ExamGate.Models
     public class User : IdentityUser
     {
         
-        [Key]
-        [PersonalData]
-        public override string? Id { get; set; }
 
         [Required]
         [PersonalData]

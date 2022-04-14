@@ -4,10 +4,17 @@
 
 namespace ExamGate.Migrations
 {
-    public partial class myNameIsLolo : Migration
+    public partial class MinorFix : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<int>(
+                name: "OptionCount",
+                table: "Option",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
+
             migrationBuilder.AddColumn<string>(
                 name: "Password",
                 table: "AspNetUsers",
@@ -18,6 +25,10 @@ namespace ExamGate.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "OptionCount",
+                table: "Option");
+
             migrationBuilder.DropColumn(
                 name: "Password",
                 table: "AspNetUsers");

@@ -8,6 +8,7 @@ namespace ExamGate.Models
     public class Exam
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ExamId { get; set; }
 
         [Required]

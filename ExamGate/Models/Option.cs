@@ -7,9 +7,12 @@ namespace ExamGate.Models
     public class Option
     {
         [Key]
-        [Range(1, 1000000000000000000,
-            ErrorMessage = "Count must be greater than 2")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OptionId { get; set; }
+
+        [Range(2, 1000000000000000000,
+                    ErrorMessage = "Count must be greater than 2")]
+        public int OptionCount { get; set; }
 
         [Display(Name = "Question")]
         public virtual int QId { get; set; }

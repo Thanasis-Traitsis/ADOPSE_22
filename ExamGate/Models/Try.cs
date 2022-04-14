@@ -8,7 +8,7 @@ namespace ExamGate.Models
     public class Try
     {
         [Key]
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TryId { get; set; }
 
         public DateTime SubmissionDateTime { get; set; } = DateTime.Now;

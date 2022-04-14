@@ -7,6 +7,7 @@ namespace ExamGate.Models
     public class Question
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int QuestionId { get; set; }
         [Required]
         public String? QuestionText { get; set; }
