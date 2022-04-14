@@ -19,7 +19,7 @@ namespace ExamGate.Models
         [Display(Name = "User")]
         public virtual int UserId { get; set; }
 
-        [ForeignKey("UserId")]
+        [ForeignKey("Id")]
         public virtual User? Users { get; set; }
 
         [Display(Name = "Exam")]
