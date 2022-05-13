@@ -20,28 +20,41 @@ namespace ExamGate.Controllers
         }
 
 
-
         [HttpGet]
-        public IActionResult Question()
+        public IActionResult Create()
         {
             return View();
         }
 
+
+
         [HttpPost]
-        public async Task<IActionResult> QuestionAsync(Question obj)
+        //[ValidateAntiForgeryToken ]
+        public async Task<IActionResult> Create(QnA q)
         {
-            if (ModelState.IsValid)
+            Question qs = new Question();
+            qs.QuestionText = q.question.QuestionText;
+            qs.Difficulty = q.question.Difficulty;
+            qs.Options = new List<Option>();
+
+            foreach (var item in q.option)
             {
-                _db.Question.Add(obj);
-                _db.SaveChanges();
-                await Task.CompletedTask;
-                TempData["success"] = "Question created successfully";
-                return RedirectToAction("Index");
+                var O = new Option()
+                {
+                    OptionText = item.OptionText,
+                    Grade=item.Grade
+
+                };
+                qs.Options.Add(O);
+
             }
 
-            return RedirectToAction("Question");
+            _db.Question.Add(qs);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
-        
-}
+
+    }
 }

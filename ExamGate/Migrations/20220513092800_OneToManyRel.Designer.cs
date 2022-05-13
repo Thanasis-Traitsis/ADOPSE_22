@@ -4,6 +4,7 @@ using ExamGate.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamGate.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220513092800_OneToManyRel")]
+    partial class OneToManyRel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,9 +35,6 @@ namespace ExamGate.Migrations
                     b.Property<DateTime>("CreationDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("QId")
                         .HasColumnType("int");
 
@@ -45,12 +44,7 @@ namespace ExamGate.Migrations
                     b.Property<int>("SubjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("ExamId");
-
-                    b.HasIndex("Id");
 
                     b.HasIndex("QId");
 
@@ -389,10 +383,6 @@ namespace ExamGate.Migrations
 
             modelBuilder.Entity("ExamGate.Models.Exam", b =>
                 {
-                    b.HasOne("ExamGate.Models.User", "Users")
-                        .WithMany()
-                        .HasForeignKey("Id");
-
                     b.HasOne("ExamGate.Models.Question", "Questions")
                         .WithMany()
                         .HasForeignKey("QId")
@@ -408,8 +398,6 @@ namespace ExamGate.Migrations
                     b.Navigation("Questions");
 
                     b.Navigation("Subjects");
-
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("ExamGate.Models.Option", b =>

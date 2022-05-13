@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace ExamGate.Models
 {
@@ -14,6 +15,8 @@ namespace ExamGate.Models
         [Required]
         [Range(minimum: 1, maximum: 10, ErrorMessage = "Dif. level should be from 1 to 10")]
         public int Difficulty { get; set; }
+        [ValidateNever]
+        public virtual ICollection<Option> Options { get; set; }
 
     }
 }

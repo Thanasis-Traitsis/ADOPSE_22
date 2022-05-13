@@ -1,0 +1,86 @@
+﻿@model QnA
+
+<form asp-controller="Question" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="@Model.question.QuestionText"></label>
+        <input asp-for="@Model.question.QuestionText" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.question.Difficulty"></label>
+        <input type="number" step="1" min="1" max="10" asp-for="@Model.question.Difficulty" />
+    </div>
+    
+    <br />
+    
+
+    <div class="form-group">
+        <div id="inputFormRow" style="width: 35%">
+            <div class="input-group mb-3">
+                <br />
+                <div class="input-group-append"></div>
+            </div>
+        </div>
+        <div id="newRow">
+            <input type="hidden" id="totalLans" value="0" />
+        </div>
+        <button id="addRow" type="button" class="btn btn-info">Add Option</button>    
+    </div>
+       
+        <button type="submit" id="createButton">Create Question</button>
+   <input 
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+@section Scripts
+{
+    <script>
+        
+       $("#addRow").click(function ()
+    {
+       
+        var rowCount = parseInt($("#totalLans").val());
+        rowCount++;
+        $("#totalLans").val(rowCount);
+        var html = '';
+        html += '<div id="inputFormRow" style="width: 35%">';
+        html += '<div class="input-group mb-3">'; 
+
+                //change id attribute to name attribute and modify the name
+        html += '<input type="text" name="option[' + (rowCount - 1) + '].OptionText" class="form-control m-input" placeholder="OptionText" autocomplete="off" style="width: 30%" required>';
+        html += '<input type="number" step="any" name="option[' + (rowCount - 1) + '].Grade" class="form-control m-input" placeholder="Grade" autocomplete="off" style="width: 30%" required>';
+        html += '<div class="input-group-append">';
+        html += '<button id="removeRow" type="button" class="btn btn-danger" style="margin-right: 5px">Remove Option</button>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow').append(html);
+        
+    });    
+
+    $(document).on('click', '#removeRow', function ()
+    {
+        var rowCount = parseInt($("#totalLans").val());
+        rowCount--;
+        $("#totalLans").val(rowCount);
+        $(this).closest('#inputFormRow').remove();
+    });    
+
+    $(document).ready(function () {
+        $("#createButton").click(function ()
+        {
+            var inputData = $('form').serializeArray();  
+            $.ajax(
+            {
+                type: "POST", //HTTP POST Method
+                url: "Question/Create", // Controller/View
+                data: inputData,
+                success : function(response) {
+                    console.log(response)
+                }
+            });
+
+        });
+    });
+    </script>
+}
