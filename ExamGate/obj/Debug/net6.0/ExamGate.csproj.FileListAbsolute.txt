@@ -28,6 +28,7 @@ H:\Github projects\ADOPSE_22\ExamGate\obj\Debug\net6.0\refint\ExamGate.dll
 H:\Github projects\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.pdb
 H:\Github projects\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.genruntimeconfig.cache
 H:\Github projects\ADOPSE_22\ExamGate\obj\Debug\net6.0\ref\ExamGate.dll
+<<<<<<< Updated upstream
 H:\Github projects\ADOPSE_22\ExamGate\bin\Debug\net6.0\Humanizer.dll
 H:\Github projects\ADOPSE_22\ExamGate\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 H:\Github projects\ADOPSE_22\ExamGate\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -59,3 +60,27 @@ H:\Github projects\ADOPSE_22\ExamGate\bin\Debug\net6.0\runtimes\win\lib\netcorea
 H:\Github projects\ADOPSE_22\ExamGate\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 H:\Github projects\ADOPSE_22\ExamGate\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 H:\Github projects\ADOPSE_22\ExamGate\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+=======
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.csproj.AssemblyReference.cache
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.AssemblyInfoInputs.cache
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.AssemblyInfo.cs
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.csproj.CoreCompileInputs.cache
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.RazorAssemblyInfo.cache
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.RazorAssemblyInfo.cs
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.dll
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\refint\ExamGate.dll
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.pdb
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.csproj.AssemblyReference.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.AssemblyInfoInputs.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.AssemblyInfo.cs
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.csproj.CoreCompileInputs.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.RazorAssemblyInfo.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.RazorAssemblyInfo.cs
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.dll
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\refint\ExamGate.dll
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.pdb
+>>>>>>> Stashed changes

@@ -1860,11 +1860,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\kalou_000\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Thodoris\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
       "projectName": "ExamGate",
       "projectPath": "H:\\Github projects\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
@@ -1873,6 +1878,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kalou_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
+      "projectName": "ExamGate",
+      "projectPath": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
+      "packagesPath": "C:\\Users\\Thodoris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Thodoris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
