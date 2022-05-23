@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ExamGate.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class examgatedb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,6 +30,7 @@ namespace ExamGate.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Admin = table.Column<bool>(type: "bit", nullable: true),
                     EndUser = table.Column<bool>(type: "bit", nullable: true),
                     DOB = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -192,16 +193,16 @@ namespace ExamGate.Migrations
                 {
                     OptionId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    QId = table.Column<int>(type: "int", nullable: false),
+                    QuestionId = table.Column<int>(type: "int", nullable: false),
                     OptionText = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Grade = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Option", x => new { x.OptionId, x.QId });
+                    table.PrimaryKey("PK_Option", x => x.OptionId);
                     table.ForeignKey(
-                        name: "FK_Option_Question_QId",
-                        column: x => x.QId,
+                        name: "FK_Option_Question_QuestionId",
+                        column: x => x.QuestionId,
                         principalTable: "Question",
                         principalColumn: "QuestionId",
                         onDelete: ReferentialAction.Cascade);
@@ -256,7 +257,7 @@ namespace ExamGate.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Try", x => new { x.TryId, x.SubmissionDateTime });
+                    table.PrimaryKey("PK_Try", x => x.TryId);
                     table.ForeignKey(
                         name: "FK_Try_AspNetUsers_Id",
                         column: x => x.Id,
@@ -325,9 +326,9 @@ namespace ExamGate.Migrations
                 column: "SubjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Option_QId",
+                name: "IX_Option_QuestionId",
                 table: "Option",
-                column: "QId");
+                column: "QuestionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Try_ExamId",

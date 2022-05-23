@@ -1,6 +1,29 @@
-﻿@{
+﻿@model SendMailDto
+@{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
+<p>This project has been implemented in the context of the "Development of Large Software Systems" course, in an academic semester.</p>
+<p>If you need more information about the project you can find our <a href="https://github.com/Thanasis-Traitsis/ADOPSE_22" target="_blank">GitHub</a> repository.</p>
+<p>Or you can send us an email for future extensions and ideas.</p>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h1>@ViewBag.Message</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Name"></label>
+        <input type="text" asp-for="@Model.Name" class="form-control" placeholder="Enter your name">
+        <span class="text-danger" asp-validation-for="@Model.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Subject"></label>
+        <input type="text" asp-for="@Model.Subject" class="form-control" placeholder="Enter your subject">
+        <span class="text-danger" asp-validation-for="@Model.Subject"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Message"></label>
+        <textarea class="form-control" asp-for="@Model.Message" placeholder="Enter your message"></textarea>
+        <span class="text-danger" asp-validation-for="@Model.Message"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Mail</button>
+</form>

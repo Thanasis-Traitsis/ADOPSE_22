@@ -1,4 +1,5 @@
-﻿@model  IEnumerable<Question>
+﻿
+@model  IEnumerable<Question>
 
 @{
     ViewData["Title"] = "Index";
@@ -48,10 +49,17 @@
     </div>
 
     <div class="container2">
-        <div class="searchbar">
+        <div class="searchbar"> //
             <input id='search' type='text'>
             <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
         </div>
+        <form method="get" asp-action="Index"> @* searching *@
+            <p>
+                <input type="search" placeholder="Search a Question" value="@ViewData["Getquestions"]" name="QSearch" style="width:500px; height:50px;" </input>
+                <input type="submit" value="Search" class="btn btn-primary"></input>
+                <a asp-action="Index">Get All Questions</a>
+            </p>
+        </form>
         <div class="line"></div>
         <div class="questions-container">
             <div class="questions-container-title">Available Questions</div>
@@ -79,8 +87,12 @@
                             <td >
                                 @obj.Difficulty
 			                </td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                                <input type="button" value="Edit" onclick="location.href='@Url.Action("Create","Question")'" />
+                            </td>
+                            <td>
+                                
+                            </td>
                         </tr>
                        
                     } 

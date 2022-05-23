@@ -1,8 +1,56 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style style="background-color: #7A9E9Fed"> </style>
+<link rel="icon" href="~/img/examgate_logo.png">
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to</h1>
+    <img src="~/img/examgate_logo.png" width="200" height="200"></img>
+</div> 
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <center>
+        <h2>an online e-learning platform!</h2>
+        <p><b>3 Simple Steps</b></p>
+        </center>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+        <center>
+        <img src="~/img/distance-education.png" width="200" height="200"></img>
+        <h4>1. Create an account</h4>
+        <p>In order to have access to our e-learning service you have to create an account. It doesn't matter if you are a student or a teacher, 
+            because the ExamGate platform has been created to improve your knowledge skills!</p>
+        </center>
+    </div>
+    <div class="col-md-4">
+        <center>
+        <img src="~/img/online-test.png" width="200" height="200"></img>
+        <h4>2. Create your Questions</h4>
+        <p>You can create your own questions, with the form of multiple choices, and then you can combine them in order to create an Examination!
+        </p>
+         </center>
+    </div>
+    <div class="col-md-4">
+        <center>
+        <img src="~/img/grade.png" width="200" height="200"></img>
+        <h4>3. Solve an Exam</h4>
+        <p>Finally, you can public your Examination to the community and give the chance to the users trying to get a hight score in your Exam.
+            If you don't want to create your Examination, you can have practice by solving the available Exams of the other users!
+        </p>
+         </center>
+    </div>
+    <div class="row">
+    <div class="col-12">
+        <center>
+        <input type="button" value="Register now!" onclick="location.href='@Url.Action("Login","Identity")'" />
+        </center>
+    </div>
+  </div>
+  </div>
+
 </div>

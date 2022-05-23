@@ -26,12 +26,6 @@ namespace ExamGate.Models
         [ForeignKey("Id")]
         public virtual User? Users { get; set; }
 
-        [Display(Name = "Subject")]
-        public virtual int SubjectId { get; set; }
-
-        [ForeignKey("SubjectId")]
-        public virtual Subject? Subjects { get; set; }
-
         public DateTime CreationDateTime  { get; set; }= DateTime.Now;
 
 
