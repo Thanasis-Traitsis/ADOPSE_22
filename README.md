@@ -1,8 +1,8 @@
 ![examgate_logo](https://user-images.githubusercontent.com/57722419/169709287-d519d81e-b88b-48cf-8717-0db4f39813b6.png)
 # Description
-An online e-learning platform, in 3 simple steps.
-**Step 1**: Create an account.
-**Step 2**: Create some questions!
+An online e-learning platform, in 3 simple steps.\
+**Step 1**: Create an account.\
+**Step 2**: Create some questions!\
 **Step 3**: Create an examination or solve an exam!
 # Contributors
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=Thanasis-Traitsis/ADOPSE_22)
