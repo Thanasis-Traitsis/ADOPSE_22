@@ -3,7 +3,8 @@
 An online e-learning platform, in 3 simple steps.\
 **Step 1**: Create an account.\
 **Step 2**: Create some questions!\
-**Step 3**: Create an examination or solve an exam!
+**Step 3**: Create an examination or solve an exam!\
+[Visit ExamGate now!](https://examgate20220524215146.azurewebsites.net/)
 # Tools
 ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
