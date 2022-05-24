@@ -3,7 +3,7 @@
 
 // Write your JavaScript code.
 
-//JS for log in
+/*JS for log in*/
 //const tl = gsap.timeline({ defaults: { duration: 1 } });
 
 //const container = document.querySelectorAll(".login_form-container");
@@ -12,6 +12,8 @@
 //container.forEach((container) => {
 //    const input = container.querySelector(".input");
 //    const placeholder = container.querySelector(".placeholder");
+
+//    input.value == "";
 
 //    input.addEventListener("focus", () => {
 
@@ -31,7 +33,7 @@
 //    });
 //});
 
-////Revert back if it's not focused
+//Revert back if it's not focused
 //form.addEventListener("click", () => {
 //    container.forEach((container) => {
 //        const input = container.querySelector(".input");
@@ -119,13 +121,11 @@ arrowDown.addEventListener('click', () => {
     }
 });
 
-//Taking the value of the Question Text -----------------> questionText
-const question = document.querySelector("#qtext");
-var questionText = question.value;
 
 //Taking the value of the Difficulty of the Question ------------> difNumber
 const difContainer = document.querySelectorAll(".difficulty-boxes__container");
 const difBox = document.querySelectorAll(".difficulty-boxes__box");
+const difficulty = document.querySelector("#dif-number");
 
 difContainer.forEach((box) => {
     box.addEventListener('click', (e) => {
@@ -134,28 +134,8 @@ difContainer.forEach((box) => {
         })
         e.target.style.backgroundColor = "#7A9E9F";
         var difNumber = e.target.innerHTML;
+
+        difficulty.value = difNumber;
     })
-})
-
-
-const multChoice = document.querySelector(".mc-btn");
-const table = document.querySelector(".answer-creation");
-const counter = document.querySelector(".options-counter");
-var count = 0;
-counter.innerHTML = count;
-
-multChoice.addEventListener("click", () => {
-    count++;
-    for (var i = 0; i < 1; i++) {
-        var newRow = table.insertRow(-1);
-        var newCell1 = newRow.insertCell(0);
-        var newCell2 = newRow.insertCell(1);
-        var newCell3 = newRow.insertCell(2);
-
-        newCell1.innerHTML = "<input id='correct' type='checkbox'>";
-        newCell2.innerHTML = "<input id='option-text' type='text'>";
-        newCell3.innerHTML = "<img id='delete' src='./iconmonstr-x-mark-9.svg' width='25px' onclick='deleteRow()'></img>";
-    }
-    counter.innerHTML = count;
 })
 

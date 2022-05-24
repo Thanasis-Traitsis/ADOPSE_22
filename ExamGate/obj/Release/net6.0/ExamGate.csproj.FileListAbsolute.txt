@@ -1,0 +1,9 @@
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.csproj.AssemblyReference.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.AssemblyInfoInputs.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.AssemblyInfo.cs
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.csproj.CoreCompileInputs.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.RazorAssemblyInfo.cache
+C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Release\net6.0\ExamGate.RazorAssemblyInfo.cs

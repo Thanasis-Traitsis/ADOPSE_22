@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ExamGate.Migrations
 {
-    public partial class examgatedb : Migration
+    public partial class examgate_db : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -188,6 +188,34 @@ namespace ExamGate.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Exam",
+                columns: table => new
+                {
+                    ExamId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    QId = table.Column<int>(type: "int", nullable: false),
+                    QuestionNumber = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    CreationDateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Exam", x => x.ExamId);
+                    table.ForeignKey(
+                        name: "FK_Exam_AspNetUsers_Id",
+                        column: x => x.Id,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Exam_Question_QId",
+                        column: x => x.QId,
+                        principalTable: "Question",
+                        principalColumn: "QuestionId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Option",
                 columns: table => new
                 {
@@ -205,41 +233,6 @@ namespace ExamGate.Migrations
                         column: x => x.QuestionId,
                         principalTable: "Question",
                         principalColumn: "QuestionId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Exam",
-                columns: table => new
-                {
-                    ExamId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    QId = table.Column<int>(type: "int", nullable: false),
-                    QuestionNumber = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    SubjectId = table.Column<int>(type: "int", nullable: false),
-                    CreationDateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Exam", x => x.ExamId);
-                    table.ForeignKey(
-                        name: "FK_Exam_AspNetUsers_Id",
-                        column: x => x.Id,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Exam_Question_QId",
-                        column: x => x.QId,
-                        principalTable: "Question",
-                        principalColumn: "QuestionId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Exam_Subject_SubjectId",
-                        column: x => x.SubjectId,
-                        principalTable: "Subject",
-                        principalColumn: "SubjectId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -321,11 +314,6 @@ namespace ExamGate.Migrations
                 column: "QId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Exam_SubjectId",
-                table: "Exam",
-                column: "SubjectId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Option_QuestionId",
                 table: "Option",
                 column: "QuestionId");
@@ -362,6 +350,9 @@ namespace ExamGate.Migrations
                 name: "Option");
 
             migrationBuilder.DropTable(
+                name: "Subject");
+
+            migrationBuilder.DropTable(
                 name: "Try");
 
             migrationBuilder.DropTable(
@@ -375,9 +366,6 @@ namespace ExamGate.Migrations
 
             migrationBuilder.DropTable(
                 name: "Question");
-
-            migrationBuilder.DropTable(
-                name: "Subject");
         }
     }
 }

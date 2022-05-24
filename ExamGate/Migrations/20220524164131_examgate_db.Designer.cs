@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamGate.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220513130157_examgatedb")]
-    partial class examgatedb
+    [Migration("20220524164131_examgate_db")]
+    partial class examgate_db
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,9 +44,6 @@ namespace ExamGate.Migrations
                     b.Property<int>("QuestionNumber")
                         .HasColumnType("int");
 
-                    b.Property<int>("SubjectId")
-                        .HasColumnType("int");
-
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
@@ -55,8 +52,6 @@ namespace ExamGate.Migrations
                     b.HasIndex("Id");
 
                     b.HasIndex("QId");
-
-                    b.HasIndex("SubjectId");
 
                     b.ToTable("Exam");
                 });
@@ -401,15 +396,7 @@ namespace ExamGate.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ExamGate.Models.Subject", "Subjects")
-                        .WithMany()
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Questions");
-
-                    b.Navigation("Subjects");
 
                     b.Navigation("Users");
                 });

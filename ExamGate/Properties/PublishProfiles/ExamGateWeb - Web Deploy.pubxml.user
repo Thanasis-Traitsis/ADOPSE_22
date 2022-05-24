@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0IpLzfvgSUuh8LrE3mSQSQAAAAACAAAAAAAQZgAAAAEAACAAAACCD6TPacsu8lMerXORK6f9bk+/G8+Q/J3+MhnRD/odJQAAAAAOgAAAAAIAACAAAAAu0aHLiUm4LhEZjlxY1i8CuZh9KtRfdDuwfoR49AKWRIAAAABpoFyt02QWMN71f160qr5U9Kilb3m+PqZE3jKjGg12zcEfz3vwrdJmfWsiEHaPb5oJql2T0/p/KouvlEzybay2HsyYdv5eLfVcPlyyhPRxIqe/Qk81xZAwalRqSI0dvFk8dc8uIehtulzkW4PH2uDO+mgIW1O2uUkA0s6grNsbSUAAAAB6NKTuhlHkbK3vwMw21rH7HbwCmhQvi6/gT7fotfSQ9YLcDLUGEUBtVspyjxh9/KsdS+8OQlruJ/9IkpP7O0CL</EncryptedPassword>
+    <History>False|2022-05-24T16:21:52.2607968Z;False|2022-05-24T19:19:17.6374709+03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:examgate-db.database.windows.net,1433%3bInitial Catalog=ExamGate_db%3bPersist Security Info=False%3bUser ID=admin-sql%3bPassword=AdOpSe_MK%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

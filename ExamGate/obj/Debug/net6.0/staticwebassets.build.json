@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pVqB8iRgJSLJMEk22ZQ0pe9Z2fZlc+fdxkNH/PXSZPc=",
+  "Hash": "AVokD6b5JP0h6Gnqs1ZEKtTIwH/mWOL8x7H+DTOrrKE=",
   "Source": "ExamGate",
   "BasePath": "_content/ExamGate",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\distance-education.png"
+    },
+    {
+      "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\img\\email.png",
+      "SourceId": "ExamGate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "BasePath": "_content/ExamGate",
+      "RelativePath": "img/email.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\email.png"
     },
     {
       "Identity": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\img\\examgate_logo.png",

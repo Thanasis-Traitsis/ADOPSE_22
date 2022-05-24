@@ -816,3 +816,5 @@ C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ExamGate.
 C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\obj\Debug\net6.0\ref\ExamGate.dll
 C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\bin\Debug\net6.0\PagedList.dll
 C:\Users\Thodoris\Documents\GitHub\ADOPSE_22\ExamGate\bin\Debug\net6.0\PagedList.Mvc.dll
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\bin\Debug\net6.0\PagedList.dll
+C:\Users\thana\Documents\GitHub\ADOPSE_22\ExamGate\bin\Debug\net6.0\PagedList.Mvc.dll
