@@ -1,10 +1,9 @@
-﻿
+﻿@page
+@using ExamGate.Areas.Identity.Pages.Account
+@model LoginModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Log in";
 }
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="main">
-        <div class="left-side side">
+<div class="main">
+    <div class="left-side side">
             <div class="big-image">
                 <svg width="100%" height="382" viewBox="0 0 616 382" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity="0.31" d="M593.715 347.72C592.513 347.736 585.12 337.852 583.703 336.483C572.123 325.277 565.175 312.965 559.954 299.571C555.975 289.36 553.007 278.512 549.767 267.067C547.579 259.348 544.053 250.72 536.413 248.285C528.979 245.921 520.973 250.824 516.405 257.143C511.828 263.462 509.528 271.126 505.621 277.875C498.53 290.108 485.979 295.233 475.601 284.481C460.782 269.121 454.104 248.174 444.705 229.439C437.885 215.837 432.17 199.912 423.575 187.369C410.467 168.253 392.489 151.945 368.589 151.945C353.435 154.237 340.089 167.664 331.048 184.433C322.015 201.202 316.738 221.154 312.249 241.051C308.485 257.74 305.182 274.612 302.126 291.572C296.444 271.134 290.53 250.848 284.132 230.911C277.2 209.319 269.543 187.807 258.911 170.529C248.278 153.251 234.199 140.509 220.064 140.596C198.282 144.814 184.227 166.319 175.01 190.147C168.97 205.77 166.041 224.696 161.759 241.202C155.87 263.94 152.782 288.675 141.465 308.58C133.546 322.507 121.369 318.958 113.164 306.439C108.635 299.531 105.444 291.317 100.374 285.014C95.3046 278.711 87.3061 274.604 80.8755 278.576C74.2619 282.658 72.2802 292.997 71.3888 302.062C70.0677 315.52 68.9137 328.238 66.741 340.43C66.2714 343.089 65.7461 345.715 65.1652 348.317H292.592C292.432 349.288 292.273 350.267 292.122 351.238L593.715 347.72Z" fill="#DCE6EF"/>
@@ -73,27 +71,52 @@
             </div>
             <p class="login-headline">Experience the procces of creating and solving a test like never before.</p>    
         </div>
-        <div class="right-side side">
-            <img src="/images/Logo.svg" alt="">
-
-            <form action="" class="login_form">
-                <div class="login_form-container">
-                    <p class="placeholder">Username</p>
-                    <input type="text" class="input">
+    <div class="right-side side">
+            <form id="account" method="post">
+                @*<h2>Use a local account to log in.</h2>
+                <hr />*@
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-floating">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true"/>
+                    <label asp-for="Input.Email" class="item"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
-                <div class="login_form-container">
-                    <p class="placeholder">Password</p>
-                    <input type="text" class="input">
+                <div class="form-floating">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                    <label asp-for="Input.Password"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
-                <button id="login_btn" class="btn">Log In</button>
+                <div>
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe" class="form-label">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="btn">Log in</button>
+                </div>
+                @*<div>
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>
+                    <p>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>
+                </div>*@
             </form>
-
-            <h3 class="subheading">Don’t have an account ? <a asp-controller="LogIn" asp-action="Signup">Sign up now.</a></h3>
+            <h4 class="subheading">Don’t have an account ? <a href="Register">Sign-Up</a></h4>
         </div>
-    </div>
+    
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/js/site.js " asp-append-version="true"></script>
-</body>
-</html>
 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

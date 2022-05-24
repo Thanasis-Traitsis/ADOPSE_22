@@ -12,7 +12,11 @@ namespace ExamGate.Models
         [Display(Name = "Option")]
         public virtual int OptionId { get; set; }
 
+<<<<<<< Updated upstream
         [ForeignKey("OptionId")]
         public virtual Option? Options { get; set; }
+=======
+        public ICollection<Exam_Question> Exam_Questions { get; set; }
+>>>>>>> Stashed changes
     }
 }
