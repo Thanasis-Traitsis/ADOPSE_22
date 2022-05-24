@@ -1,0 +1,41 @@
+@model Question
+<form method="post" asp-action="Delete">
+	<input asp-for="QuestionId" hidden />
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Delete Category</h2>
+			<hr />
+		</div>
+		@*<div asp-validation-summary="All"></div>*@
+		<div class="mb-3">
+			<label asp-for="QuestionText"></label>
+			<input asp-for="QuestionText" disabled class="form-control" />
+		</div>
+        <div class="mb-3">
+			<label asp-for="Difficulty"></label>
+			<input asp-for="Difficulty" disabled class="form-control" />
+		</div>
+        @foreach(var o in @Model.Options){
+            <div class="mb-3">
+			<label asp-for="@o.OptionId"></label>
+			<input asp-for="@o.OptionId" disabled class="form-control" />
+		    </div>
+            <div class="mb-3">
+                <label asp-for="@o.OptionText"></label>
+                <input asp-for="@o.OptionText" disabled class="form-control" />
+            </div>
+            
+        }
+		
+		<button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+		<a asp-controller="Question" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}

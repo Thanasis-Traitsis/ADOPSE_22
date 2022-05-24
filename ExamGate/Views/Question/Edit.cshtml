@@ -1,8 +1,7 @@
-﻿
-@model  IEnumerable<Question>
+@model Question
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Create";
 }
 
 <!DOCTYPE html>
@@ -43,10 +42,11 @@
                 </clipPath>
                 </defs>
                 </svg></a>
+            
         </div>
         <ul class="nav__list">
-            <li class="nav__list-item active-link"><a asp-controller="Question" asp-action="Index">HOME</a></li>
-            <li class="nav__list-item "><a asp-controller="Question" asp-action="Create">Create Question</a></li>
+            <li class="nav__list-item "><a asp-controller="Question" asp-action="Index">HOME</a></li>
+            <li class="nav__list-item active-link "><a asp-controller="Question" asp-action="Create">Create Question</a></li>
             <li class="nav__list-item dropdown"><a href="#" class="nav__list-link">EXAMS</a><svg id="arrow" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/></svg></li>
             <li class="nav__list-item exam"><a href="#" class="nav__list-link">AVAILABLE EXAMS</a></li>
             <li class="nav__list-item exam"><a asp-controller="Exam" asp-action="CreateExam">CREATE EXAM</a></li>
@@ -54,58 +54,214 @@
     </div>
 
     <div class="container2">
-     
-        <form method="get" asp-action="Index"> @* searching *@
-            <div class="search-box">
-                <input id="searchbar" type="search" placeholder="Search a Question" value="@ViewData["Getquestions"]" name="QSearch" style="width:500px; height:50px;" </input>
-                <input type="submit" value="Search" class="btn-search"></input>
-                <a asp-action="Index">Get All Questions</a>
+        <form asp-controller="Question" asp-action="Edit" method="post">
+            <div >
+                
+                <input type="text"  hidden asp-for="@Model.QuestionId"/>
             </div>
+            <div class="form-question">
+                <p class="question-text">Place your question here :</p>
+                <input type="textarea"  asp-for="@Model.QuestionText"/>
+            </div>
+            @*<textarea name="" id="qtext" cols="30" rows="15" ></textarea>*@
+            <div class="line"></div>
+
+            <div class="difficulty">
+                    <p class="difficulty-text">Place the difficulty of this question (from 1 to 10) :</p>
+                    <div class="difficulty-number">
+                        <div class="difficulty-boxes">
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">1</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">2</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">3</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">4</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">5</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">6</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">7</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">8</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">9</div>
+                            </div>
+                            <div class="difficulty-boxes__container">
+                                <div class="difficulty-boxes__box">10</div>
+                            </div>                       
+                        </div>
+                    </div>
+                    <div class="form-group dif">
+                        <label asp-for="@Model.Difficulty"></label>
+                        <input id="dif-number" asp-for="@Model.Difficulty" />
+                    </div>
+                </div>
+    
+            <br />
+    
+
+            <div class="form-group">
+                <div id="inputFormRow" style="width: 35%">
+                    <div class="input-group mb-3">
+                        <br />
+                        <div class="input-group-append"></div>
+                    </div>
+                </div>
+                <div id="newRow">
+                    <input type="hidden" id="totalLans" value="0" />
+                    @foreach(var o in @Model.Options){
+
+                        <div id="inputFormRow" style="width: 35%">
+                            <div class="input-group mb-3">
+                                <input type="text" asp-for="@o.OptionText"  class="form-control m-input" placeholder="Option Text" autocomplete="off" style="width: 30%" required>
+                                <input type="number" step="any" asp-for="@o.Grade"  class="form-control m-input" placeholder="Grade" autocomplete="off" style="width: 30%" required>
+                            </div>
+                            <div class="input-group-append"><button id="removeRow" type="button" class="btn btn-danger" style="margin-right:5px" >Remove Option</button></div>
+                        </div>
+        }   
+                </div>
+                <button id="addRow" type="button" class="btn">Add Option</button>    
+            </div>
+
+            <div class="line"></div>
+       
+                <button type="submit" class="btn" id="createButton">Update Question</button>
         </form>
-        <div class="line"></div>
-        <div class="questions-container">
-            <div class="questions-container-title">Available Questions</div>
-            <div class="questions-table-titles grid">
-                <div class="qid table-titles">ID</div>
-                <div class="qtext table-titles">Question</div>
-                <div class="qdif table-titles">Difficulty</div>
-                <div class="qedit table-titles">Edit</div>
-                <div class="qdelete table-titles">Delete</div>
-            </div>
-            <div class="questions-container-table">
-                <table class="table table-bordered table-striped">
-                    <tbody> 
-         
-                    @foreach(var obj in @Model )
-                    { 
-            
-                        <tr class="grid">
-                            <td>
-                                @obj.QuestionId
-			                </td>
-                            <td>
-                                @obj.QuestionText
-			                </td>
-                            <td >
-                                @obj.Difficulty
-			                </td>
-                            <td>
-                                @* <input type="button" value="Edit" onclick="location.href='@Url.Action("Create","Question")'" /> *@
-                                <a asp-controller="Question" asp-action="Edit" method="get" asp-route-id="@obj.QuestionId"
-                                class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i> Edit</a>
-                            </td>
-                            <td>
-                                 <a asp-controller="Question" asp-action="Delete" asp-route-id="@obj.QuestionId"
-                                class="btn btn-danger mx-2"> <i class="bi bi-trash-fill"></i> Delete</a>
-                            </td>
-                        </tr>
-                       
-                    } 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+   </div>
     <script src="~/js/site.js " asp-append-version="true"></script>
 </body>
 </html>
+
+@*<form asp-controller="Question" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="@Model.question.QuestionText"></label>
+        <input asp-for="@Model.question.QuestionText" />
+    </div>
+
+    <div class="difficulty">
+            <p class="difficulty-text">Place the difficulty of this question (from 1 to 10) :</p>
+            <div class="difficulty-number">
+                <div class="difficulty-boxes">
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">1</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">2</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">3</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">4</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">5</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">6</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">7</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">8</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">9</div>
+                    </div>
+                    <div class="difficulty-boxes__container">
+                        <div class="difficulty-boxes__box">10</div>
+                    </div>                       
+                </div>
+            </div>
+            <div class="form-group dif">
+                <label asp-for="@Model.question.Difficulty"></label>
+                <input id="dif-number" asp-for="@Model.question.Difficulty" />
+            </div>
+        </div>
+    
+    <br />
+    
+
+    <div class="form-group">
+        <div id="inputFormRow" style="width: 35%">
+            <div class="input-group mb-3">
+                <br />
+                <div class="input-group-append"></div>
+            </div>
+        </div>
+        <div id="newRow">
+            <input type="hidden" id="totalLans" value="0" />
+        </div>
+        <button id="addRow" type="button" class="btn btn-info">Add Option</button>    
+    </div>
+       
+        <button type="submit" id="createButton">Create Question</button>
+</form>*@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+@section Scripts
+{
+    <script>
+        
+       $("#addRow").click(function ()
+    {
+       
+        var rowCount = parseInt($("#totalLans").val());
+        rowCount++;
+        $("#totalLans").val(rowCount);
+        var html = '';
+        html += '<div id="inputFormRow" style="width: 75%">';
+        html += '<div class="input-group mb-3">'; 
+
+                //change id attribute to name attribute and modify the name
+        html += '<input type="text" name="option[' + (rowCount - 1) + '].OptionText" class="form-control m-input" placeholder="OptionText" autocomplete="off" style="width: 60%" required>';
+        html += '<input type="number" step="any" name="option[' + (rowCount - 1) + '].Grade" class="form-control m-input" placeholder="Grade" autocomplete="off" style="width: 10%" required>';
+        html += '<div class="input-group-append">';
+        html += '<button id="removeRow" type="button" class="btn-remove" style="margin-right: 5px">Remove Option</button>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow').append(html);
+        
+    });    
+
+    $(document).on('click', '#removeRow', function ()
+    {
+        var rowCount = parseInt($("#totalLans").val());
+        rowCount--;
+        $("#totalLans").val(rowCount);
+        $(this).closest('#inputFormRow').remove();
+    });    
+
+    $(document).ready(function () {
+        $("#createButton").click(function ()
+        {
+            var inputData = $('form').serializeArray();  
+            $.ajax(
+            {
+                type: "POST", //HTTP POST Method
+                url: "Question/Edit", // Controller/View
+                data: inputData,
+                success : function(response) {
+                    console.log(response)
+                }
+            });
+
+        });
+    });
+
+    </script>
+}

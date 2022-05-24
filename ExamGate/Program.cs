@@ -22,6 +22,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)//an thelei confirmed
                                                                                                     //account h oxi
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
@@ -56,6 +57,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
     options.SlidingExpiration = true;
 });
+builder.Services.AddScoped<IQuestionRepository,SQLQuestionRepository>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
