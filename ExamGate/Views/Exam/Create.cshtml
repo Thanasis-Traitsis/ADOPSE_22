@@ -1,9 +1,4 @@
-﻿
-@model  IEnumerable<Question>
-
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@model IEnumerable<Question>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,67 +40,127 @@
                 </svg></a>
         </div>
         <ul class="nav__list">
-            <li class="nav__list-item active-link"><a asp-controller="Question" asp-action="Index">HOME</a></li>
+            <li class="nav__list-item "><a asp-controller="Question" asp-action="Index">HOME</a></li>
             <li class="nav__list-item "><a asp-controller="Question" asp-action="Create">Create Question</a></li>
             <li class="nav__list-item dropdown"><a href="#" class="nav__list-link">EXAMS</a><svg id="arrow" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/></svg></li>
             <li class="nav__list-item exam"><a href="#" class="nav__list-link">AVAILABLE EXAMS</a></li>
-            <li class="nav__list-item exam"><a asp-controller="Exam" asp-action="Create">CREATE EXAM</a></li>
+            <li class="nav__list-item exam active-link"><a asp-controller="Exam" asp-action="Create">CREATE EXAM</a></li>
         </ul>
     </div>
 
     <div class="container2">
      
-        <form method="get" asp-action="Index"> @* searching *@
-            <div class="search-box">
-                <input id="searchbar" type="search" placeholder="Search a Question" value="@ViewData["Getquestions"]" name="QSearch" style="width:500px; height:50px;" </input>
-                <input type="submit" value="Search" class="btn-search"></input>
-                <a asp-action="Index">Get All Questions</a>
-            </div>
-        </form>
-        <div class="line"></div>
-        <div class="questions-container">
-            <div class="questions-container-title">Available Questions</div>
-            <div class="questions-table-titles grid">
-                <div class="qid table-titles">ID</div>
-                <div class="qtext table-titles">Question</div>
-                <div class="qdif table-titles">Difficulty</div>
-                <div class="qedit table-titles">Edit</div>
-                <div class="qdelete table-titles">Delete</div>
-            </div>
-            <div class="questions-container-table">
-                <table class="table table-bordered table-striped">
-                    <tbody> 
-         
-                    @foreach(var obj in @Model )
-                    { 
-            
-                        <tr class="grid">
-                            <td>
-                                @obj.QuestionId
-			                </td>
-                            <td>
-                                @obj.QuestionText
-			                </td>
-                            <td >
-                                @obj.Difficulty
-			                </td>
-                            <td>
-                                @* <input type="button" value="Edit" onclick="location.href='@Url.Action("Create","Question")'" /> *@
-                                <a asp-controller="Question" asp-action="Edit" method="get" asp-route-id="@obj.QuestionId"
-                                > <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.071 21.586l-7.071 1.414 1.414-7.071 14.929-14.929 5.657 5.657-14.929 14.929zm-.493-.921l-4.243-4.243-1.06 5.303 5.303-1.06zm9.765-18.251l-13.3 13.301 4.242 4.242 13.301-13.3-4.243-4.243z"/></svg></a>
-                            </td>
-                            <td>
-                                 <a asp-controller="Question" asp-action="Delete" asp-route-id="@obj.QuestionId"
-                               ><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19 24h-14c-1.104 0-2-.896-2-2v-17h-1v-2h6v-1.5c0-.827.673-1.5 1.5-1.5h5c.825 0 1.5.671 1.5 1.5v1.5h6v2h-1v17c0 1.104-.896 2-2 2zm-14-2.5c0 .276.224.5.5.5h13c.276 0 .5-.224.5-.5v-16.5h-14v16.5zm5-18.5h4v-1h-4v1z"/></svg></a>
-                            </td>
-                        </tr>
-                       
-                    } 
-                    </tbody>
-                </table>
-            </div>
-        </div>
+       <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Επιλεγμένες ερωτήσεις</th>
+                <th scope="col">Ονομασία εξέτασης</th>
+                <th scope="col">Μέσος όρος δυσκολίας </th>
+                <th scope="col">Διάρκεια εξέτασης</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="question_number">-</td>
+                <td>
+                    <input id="exam_name" type="text" placeholder="mytest1" />
+                </td>
+                <td id="difficulty_averrage">-</td>
+                <td>
+                    <input id="exam_time" type="number" placeholder="Χρόνος σε λεπτά" />
+                </td>
+                <td>
+                    <input id="exam_button" onclick="exam_validity()" class="btn-sm" type="button" value="Correctness check" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Επιλεγμένες ερωτήσεις</th>
+                <th scope="col">Ερώτηση</th>
+                <th scope="col">Δυσκολία</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in @Model)
+            {
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="settings" id="@obj.QuestionId">
+                    </td>
+                    <td>
+                        @obj.QuestionText
+                    </td>
+                    <td>
+                        @obj.Difficulty
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
     </div>
     <script src="~/js/site.js " asp-append-version="true"></script>
+    <script>
+        let checkboxes = $("input[type=checkbox][name=settings]")
+        let picked_questions_array = [];
+
+        // Attach a change event handler to the checkboxes.
+        checkboxes.change(function(e) {
+          picked_questions_array = checkboxes
+            .filter(":checked") // Filter out unchecked boxes.
+            .map(function() { // Extract values using jQuery map.
+              return this.id;
+            })
+            .get() // Get array.
+            document.getElementById("question_number").innerHTML = picked_questions_array.length;
+        });
+
+        function exam_validity(){
+            let exam_name = document.getElementById("exam_name").value;
+            let exam_time = document.getElementById("exam_time").value;
+            let button_choise = document.getElementById("exam_button").value;
+            let exam_choises = [];
+
+            if( exam_name == "" || exam_time == 0){
+                alert("You must set a exam name or time");
+                document.getElementById("exam_button").value = "Correctness check";
+                return;
+            }else{
+                if(picked_questions_array.length==0){
+                    alert("You must choose at least one question");
+                    document.getElementById("exam_button").value = "Correctness check";
+                    return;
+                }else{
+                        if(button_choise == "Submit"){
+                         alert("Exam submited");
+                        //o telikos pinakas me tis epiloges toy rhsth
+                        //pinakas mias gramhs sthn prvth thesi einai to onoma toy test
+                        //sthn deyterh thesi einai ta lepta toy test
+                        //kai akoloythoyn oi erotiseis
+                        exam_choises.push(exam_name,exam_time);
+                        let final_exam = exam_choises.concat(picked_questions_array);
+                       
+                        console.log(final_exam);
+
+                        }else{
+                            document.getElementById("exam_button").value = "Submit";
+                            alert("Final step! Check the exam difficulty level before submission");
+                            exam_choises.push(exam_name,exam_time);
+                            //Kalei thn bash briskei apo thn bash ta id poy einai apouhkeymena ston pinaka picked_questions_array[] kai ypologizei ton meso oro
+                            //ton opio ton opoio ton stelnei me innerHtml sto #difficulty_averrage
+                        }
+
+                }
+            }}
+
+
+    </script>
 </body>
 </html>

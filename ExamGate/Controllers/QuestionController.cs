@@ -5,6 +5,7 @@ using ExamGate.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using System.Threading;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ExamGate.Controllers
 {
@@ -25,6 +26,8 @@ namespace ExamGate.Controllers
         {
             _questionRepository = questionRepository;
         }
+
+        [Authorize]
         public IActionResult Index()
         {
             // IEnumerable<Option> options = _db.Options;
@@ -43,7 +46,7 @@ namespace ExamGate.Controllers
         }
 
 
-
+        [Authorize]
         [HttpPost]
         //[ValidateAntiForgeryToken ]
         public async Task<IActionResult> Create(QnA q)
@@ -69,7 +72,8 @@ namespace ExamGate.Controllers
 
             return RedirectToAction("Index");
         }
- 
+
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
@@ -85,7 +89,7 @@ namespace ExamGate.Controllers
             return View(q);
         }
 
-        
+        [Authorize]
         [HttpPost, ActionName("Edit")]
         //[ValidateAntiForgeryToken]
         public async Task <IActionResult> Edit(Question changedQ,IFormCollection collection)
@@ -136,6 +140,7 @@ namespace ExamGate.Controllers
              return View(changedQ);
         }
 
+        [Authorize]
         public IActionResult Delete(int id)
         {
             

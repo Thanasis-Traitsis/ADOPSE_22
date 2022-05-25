@@ -49,7 +49,7 @@
             <li class="nav__list-item active-link "><a asp-controller="Question" asp-action="Create">Create Question</a></li>
             <li class="nav__list-item dropdown"><a href="#" class="nav__list-link">EXAMS</a><svg id="arrow" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/></svg></li>
             <li class="nav__list-item exam"><a href="#" class="nav__list-link">AVAILABLE EXAMS</a></li>
-            <li class="nav__list-item exam"><a asp-controller="Exam" asp-action="CreateExam">CREATE EXAM</a></li>
+            <li class="nav__list-item exam"><a asp-controller="Exam" asp-action="Create">CREATE EXAM</a></li>
         </ul>
     </div>
 
@@ -122,12 +122,12 @@
                     <input type="hidden" id="totalLans" value="0" />
                     @foreach(var o in @Model.Options){
 
-                        <div id="inputFormRow" style="width: 35%">
+                        <div id="inputFormRow" style="width: 75%">
                             <div class="input-group mb-3">
-                                <input type="text" asp-for="@o.OptionText"  class="form-control m-input" placeholder="Option Text" autocomplete="off" style="width: 30%" required>
-                                <input type="number" step="any" asp-for="@o.Grade"  class="form-control m-input" placeholder="Grade" autocomplete="off" style="width: 30%" required>
+                                <input type="text" asp-for="@o.OptionText"   class="form-control m-input" placeholder="OptionText" autocomplete="off" style="width: 60%" required>
+                                <input type="number" step="any" asp-for="@o.Grade"  class="form-control m-input" placeholder="Grade" autocomplete="off" style="width: 10%" required>
                             </div>
-                            <div class="input-group-append"><button id="removeRow" type="button" class="btn btn-danger" style="margin-right:5px" >Remove Option</button></div>
+                            <div class="input-group-append"><button id="removeRow" type="button" class="btn-remove" style="margin-right: 5px">Remove Option</button></div>
                         </div>
         }   
                 </div>

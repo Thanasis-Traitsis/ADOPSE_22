@@ -1,12 +1,12 @@
 @model Question
 <form method="post" asp-action="Delete">
 	<input asp-for="QuestionId" hidden />
-	<div class="border p-3 mt-4">
-		<div class="row pb-2">
-			<h2 class="text-primary">Delete Category</h2>
-			<hr />
+	<div >
+		<div class="delete-header">
+			<h2>Delete Category</h2>
 		</div>
-		@*<div asp-validation-summary="All"></div>*@
+		<div class="delete-form">
+			@*<div asp-validation-summary="All"></div>*@
 		<div class="mb-3">
 			<label asp-for="QuestionText"></label>
 			<input asp-for="QuestionText" disabled class="form-control" />
@@ -26,11 +26,14 @@
             </div>
             
         }
-		
-		<button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
-		<a asp-controller="Question" asp-action="Index" class="btn btn-secondary" style="width:150px">
+		<div class="delete-btns">
+			<button type="submit" class="btn-remove">Delete</button>
+		<a asp-controller="Question" asp-action="Index" class="btn">
 			Back to List
 		</a>
+		</div>
+		</div>
+		
 	</div>
 </form>
 

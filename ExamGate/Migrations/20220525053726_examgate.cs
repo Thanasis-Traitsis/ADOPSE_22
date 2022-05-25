@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ExamGate.Migrations
 {
-    public partial class examgate_db : Migration
+    public partial class examgate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

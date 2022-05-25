@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {}
+    "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {
+    "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
+        "projectUniqueName": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
         "projectName": "ExamGate",
-        "projectPath": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
-        "packagesPath": "C:\\Users\\Thodoris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thodoris\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\",
+        "projectPath": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\ExamGate.csproj",
+        "packagesPath": "C:\\Users\\thana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Thodoris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

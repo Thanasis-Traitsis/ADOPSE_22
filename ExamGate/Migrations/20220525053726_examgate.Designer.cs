@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamGate.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220524164131_examgate_db")]
-    partial class examgate_db
+    [Migration("20220525053726_examgate")]
+    partial class examgate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
