@@ -4,6 +4,7 @@
 // Write your JavaScript code.
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 //JS for log in
 const tl = gsap.timeline({ defaults: { duration: 1 } });
 
@@ -77,6 +78,8 @@ container2.forEach((container) => {
     });
 });
 =======
+=======
+>>>>>>> Stashed changes
 /*JS for log in*/
 //const tl = gsap.timeline({ defaults: { duration: 1 } });
 

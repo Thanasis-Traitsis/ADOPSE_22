@@ -1,9 +1,13 @@
 {
   "Version": 1,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "Hash": "xcQf2dXdnnVR5Vt3E9xSSo2l0uGEkIgzlzJ+vI7L2fU=",
 =======
   "Hash": "wtr6FXP7xSsD4JUDLI14u+d8+a04JrO9K2GthCWBuF0=",
+>>>>>>> Stashed changes
+=======
+  "Hash": "Ra9pkd6KzHIYQna9M+Wy1dGWXBWE1sKAiO14qOO0t0k=",
 >>>>>>> Stashed changes
   "Source": "ExamGate",
   "BasePath": "_content/ExamGate",
@@ -1109,10 +1113,102 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\js\\site.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\img\\distance-education.png",
+      "SourceId": "ExamGate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "BasePath": "_content/ExamGate",
+      "RelativePath": "img/distance-education.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\distance-education.png"
+    },
+    {
+      "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\img\\email.png",
+      "SourceId": "ExamGate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "BasePath": "_content/ExamGate",
+      "RelativePath": "img/email.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\email.png"
+    },
+    {
+      "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\img\\examgate_logo.png",
+      "SourceId": "ExamGate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "BasePath": "_content/ExamGate",
+      "RelativePath": "img/examgate_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\examgate_logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\img\\grade.png",
+      "SourceId": "ExamGate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "BasePath": "_content/ExamGate",
+      "RelativePath": "img/grade.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\grade.png"
+    },
+    {
+      "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\img\\online-test.png",
+      "SourceId": "ExamGate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+      "BasePath": "_content/ExamGate",
+      "RelativePath": "img/online-test.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\online-test.png"
+    },
+    {
+      "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\js\\site.js",
+      "SourceId": "ExamGate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/ExamGate",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1127,11 +1223,14 @@
     },
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
 =======
+=======
+>>>>>>> Stashed changes
       "Identity": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
@@ -1901,6 +2000,9 @@
       "SourceId": "ExamGate",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\thana\\Documents\\GitHub\\ADOPSE_22\\ExamGate\\wwwroot\\",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       "BasePath": "_content/ExamGate",
       "RelativePath": "lib/jquery/dist/jquery.js",
